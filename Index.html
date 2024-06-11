@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Idea Submission</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="form-container">
+        <img src="https://i.postimg.cc/fRJ4bWZF/image-920x220-jpg.png.png" alt="Header Image">
+
+        <div class="div1">
+            <h2>Your Game Idea?</h2>
+            <p>Submit Your Game Idea Here</p>
+            <form id="formclear" action="https://www.google.com/" method="post">
+                <label for="email">Email:</label>
+                <input style="margin-bottom:10px;border-color: orange;" type="email" id="email" name="email" placeholder="Enter Your Email" />
+                <div>
+                    <span id="current-email" class="email-display">Enter Your Another Email</span>
+                    <a href="#" onclick="enterAccount()">Switch accounts</a>
+                </div>
+                <div>
+                    <label class="name">Your Name</label>
+                    <input style="margin-top:10px;border-color: orange;" type="text" placeholder="Enter Your Name" />
+                </div>
+            </div>
+
+            <div class="div1">
+                <h4>Category of Game</h4>
+                <p>Choose Your Game Category</p>
+                <div>
+                    <input type="radio" name="gaming" id="input-1" />
+                    <label for="input-1">Action Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-2" />
+                    <label for="input-2">Story Mode Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-3" />
+                    <label for="input-3">Simulation Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-4" />
+                    <label for="input-4">Adventure Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-5" />
+                    <label for="input-5">Survival Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-6" />
+                    <label for="input-6">Shooter Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-7" />
+                    <label for="input-7">RPG Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-8" />
+                    <label for="input-8">Multiplayer Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-9" />
+                    <label for="input-9">Platformer Game</label>
+                </div>
+                <div>
+                    <input type="radio" name="gaming" id="input-10" />
+                    <label for="input-10">Puzzle Game</label>
+                </div>
+                <div>
+                    <label for="input-11">Other:</label>
+                    <input type="text" name="gaming" id="input-11" style="border-color: orange;" />
+                </div>
+            </div>
+
+            <div class="div1">
+                <h3>Subject Of The Game</h3>
+                <h4>Name Your Own Game</h4>
+                <label for="input-12">Other:</label>
+                <input type="text" name="gaming" id="input-12" style="border-color: orange;" />
+                <div class="explain">
+                    <h3>Explain Your Idea</h3>
+                    <label for="bio">Elaborate your idea:</label>
+                    <textarea id="bio" name="bio" style="border-color: orange;" required></textarea>
+                </div>
+            </div>
+
+            <div class="div1">
+                <h3>Attachments (Like Your Video or Image Reference)</h3>
+                <p>You Can Record Your Own Video For Explanation...</p>
+                <label for="file">Choose image to upload:</label>
+                <input type="file" id="file" name="file" accept="image/*" />
+            </div>
+
+            <div class="clear">
+                <input style="background:rgb(255, 111, 0); color:white;" type="submit" value="Submit" onclick="showThankYou(event)" />
+                <button style="background:rgb(255, 111, 0); color: white;" type="button" onclick="clearForm()">Clear Form</button>
+            </div>
+            <div class="p1" onclick="showFeedbackForm()">
+                <p>ℹ️</p>
+            </div>
+        </div>
+
+        <div class="div1 hidden" id="thank-you-container">
+            <div class="header">
+                <img src="https://i.postimg.cc/fRJ4bWZF/image-920x220-jpg.png.png" alt="Header Image">
+            </div>
+            <div class="thank-you">
+                <h3>Your Game Idea</h3>
+                <p>Your response has been recorded.</p>
+                <a href="https://editor.codeyogi.io/p/qAbZOgeeHi6PHjPI5Xg8TEWIM5rzq6kF?viewportSize=">Submit another response</a>
+            </div>
+        </div>
+
+    <div class="overlay hidden" id="feedback-form-container">
+        <div class="feedback-form">
+            <button class="close-btn" onclick="closeFeedbackForm()">×</button>
+            <h2>Send feedback to Google</h2>
+            <form id="feedback-form">
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" style="width: 100%;"></textarea><br/>
+                <button type="submit" style="margin-top: 10px; color: white; background: rgb(255, 111, 0); border-radius: 8px;">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
+<style>
+
+body {
+  background: rgb(204, 160, 122);
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  margin: 20px;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.div1 {
+  background: whitesmoke;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5px;
+  padding: 5px;
+}
+
+.clear {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hidden {
+  display: none;
+}
+
+.header img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thank-you {
+  margin-top: 5px;
+}
+
+.p1 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.feedback-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+  </style>
+<script>
+  function enterAccount() {
+    let email = prompt("Enter new email address:");
+    if (email) {
+        document.querySelectorAll(".email-display").forEach(el => el.textContent = email);
+        document.getElementById("email").value = email;
+    }
+}
+
+function clearForm() {
+    document.getElementById("formclear").reset();
+}
+
+function showThankYou(event) {
+    event.preventDefault();
+    document.getElementById("form-container").classList.add("hidden");
+    document.getElementById("thank-you-container").classList.remove("hidden");
+}
+
+function showFeedbackForm() {
+    document.getElementById("feedback-form-container").classList.remove("hidden");
+}
+
+function closeFeedbackForm() {
+    document.getElementById("feedback-form-container").classList.add("hidden");
+}
+
+function clearFeedbackForm() {
+    document
+  
+</script>
+
+                      
